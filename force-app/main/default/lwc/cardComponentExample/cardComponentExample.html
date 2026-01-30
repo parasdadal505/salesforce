@@ -1,0 +1,23 @@
+<template>
+    <div class="slds-box" style="background-color: aliceblue;">
+        <div class="slds-grid slds-wrap">
+
+            <template for:each={listofrecordsimage} for:item="card">
+                <div key={card} class="slds-col slds-size_3-of-12">
+
+                    <lightning-card title={card.title} class="slds-m-around_small">
+
+                        <img src={card.imgUrl} alt="Image" class="slds-m-around_small" />
+
+                        <p class="slds-p-horizontal_small">{description}</p>
+
+                    </lightning-card>
+
+                </div>
+            </template>
+
+
+        </div>
+    </div>
+
+</template>

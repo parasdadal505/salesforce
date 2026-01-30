@@ -1,0 +1,25 @@
+<template>
+
+    <div class="slds-box" style="background-color: aliceblue;">
+        <div class="slds-grid slds-wrap">
+            <div class="slds-col slds-size_6-of-12">
+                <lightning-input type="text" label="Name" placeholder="enter a name"></lightning-input>
+
+            </div>
+
+            <div class="slds-col slds-size_6-of-12">
+
+                <lightning-input type="number" label="Age" placeholder="enter age"></lightning-input>
+
+            </div>
+        </div>
+        <div class="slds-grid slds-wrap">
+            <div class="slds-col slds-size_12-of-12">
+                <lightning-button variant="success" label="submit" title="Successful" onclick={handleClick}
+                    class="slds-m-left_x-small slds-align_absolute-center"></lightning-button>
+
+            </div>
+        </div>
+    </div>
+
+</template>

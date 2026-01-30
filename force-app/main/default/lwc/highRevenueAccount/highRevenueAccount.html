@@ -1,0 +1,42 @@
+<template>
+
+
+    <template for:each={accountToDisplay} for:item="account">
+
+        <lightning-card key={account.Id} title="High Revenue Account" class="slds-m-bottom_small slds-p-around_small">
+
+            <div class="slds-grid" style="background-color: antiquewhite; border-radius: 0.5rem; 
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); padding: 1rem; color: #333; font-family: Arial, sans-serif;
+            font-size: 1rem; ">
+
+                <div class=" slds-p-around_small">
+
+                </div>
+
+                <div class="slds-grid slds-gutters">
+                    <div class="slds-col sslds-size_1-of-3">
+                        <img src={account.imageUrl} style="width:100px;height:100px;border-radius:75%;"
+                            alt="Account Image" />
+
+
+                    </div>
+                    <div class="slds-col slds-size_2-of-3">
+                        <p>Name:  {account.Name}</p>
+                        <p>Annual Revenue: {account.AnnualRevenue}</p>
+                        <p>Phone: {account.Phone}</p>
+                        <p>Website: {account.Website}</p>
+
+                    </div>
+                </div>
+
+
+
+            </div>
+
+
+
+
+        </lightning-card>
+    </template>
+
+</template>

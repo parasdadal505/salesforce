@@ -1,0 +1,22 @@
+<template>
+    <div class="slds-box slds-theme_shade">
+        <h2 class="slds-text-heading_small">Results (Child)</h2>
+
+        <template if:true={results.length}>
+            <ul class="slds-m-top_small">
+                <template for:each={results} for:item="item">
+                    <li key={item} class="slds-m-vertical_x-small">
+                        <lightning-icon icon-name="utility:search" size="x-small"></lightning-icon>
+                        <span class="slds-m-left_small">{item}</span>
+                    </li>
+                </template>
+            </ul>
+        </template>
+
+        <template if:false={results.length}>
+            <p class="slds-m-top_small slds-text-color_weak">
+                No results yet...
+            </p>
+        </template>
+    </div>
+</template>

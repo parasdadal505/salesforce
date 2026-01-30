@@ -1,0 +1,18 @@
+<template>
+
+    <div class="slds-box slds-theme_shade">
+        <h2 class="slds-text-heading_small">Cart Counter parent Component</h2>
+
+        
+        <div class="slds-m-top_medium">
+            
+            <lightning-button label="Increase" variant="brand" onclick={handleIncrease}></lightning-button>
+            <lightning-button class="slds-m-left_small" label="Decrease" onclick={handleDecrease}></lightning-button>
+            <lightning-button class="slds-m-left_small" label="Reset" onclick={handleReset}></lightning-button>
+        </div>
+        
+        <c-cart-counter-child></c-cart-counter-child>
+       
+    </div>
+    
+</template>

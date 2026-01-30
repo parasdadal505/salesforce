@@ -1,0 +1,31 @@
+<template>
+    <lightning-card title="Contacts (Child List)">
+        <div class="slds-p-around_medium">
+
+            <p class="slds-text-color_weak slds-m-bottom_small">
+                Showing: <b>{currentFilterLabel}</b>
+            </p>
+
+            <template if:true={filteredContacts.length}>
+                <ul class="slds-has-dividers_around-space">
+                    <template for:each={filteredContacts} for:item="c">
+                        <li key={c.Id} class="slds-item slds-p-around_small">
+                            <p><b>{c.Name}</b></p>
+                            <p class="slds-text-color_weak slds-text-body_small">
+                                {c.Email} | {c.Phone}
+                            </p>
+                            <lightning-badge label={c.Status}></lightning-badge>
+                        </li>
+                    </template>
+                </ul>
+            </template>
+
+            <template if:false={filteredContacts.length}>
+                <div class="slds-text-color_weak">
+                    No contacts found for this filter.
+                </div>
+            </template>
+
+        </div>
+    </lightning-card>
+</template>

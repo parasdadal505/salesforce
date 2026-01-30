@@ -1,0 +1,45 @@
+<template>
+    <lightning-card title="Contact Filter Panel (Parent)">
+        <div class="slds-p-around_medium">
+
+            <div class="slds-grid slds-gutters slds-wrap">
+
+                <div class="slds-col slds-size_4-of-12">
+                    <lightning-combobox
+                        label="Filter by Status"
+                        value={selectedStatus}
+                        options={statusOptions}
+                        onchange={handleStatusChange}
+                    ></lightning-combobox>
+                </div>
+
+                <div class="slds-col slds-size_8-of-12 slds-m-top_large">
+                    <lightning-button
+                        label="Apply Filter"
+                        variant="brand"
+                        onclick={applyFilter}
+                    ></lightning-button>
+
+                    <lightning-button
+                        class="slds-m-left_small"
+                        label="Refresh"
+                        onclick={handleRefresh}
+                    ></lightning-button>
+
+                    <lightning-button
+                        class="slds-m-left_small"
+                        label="Clear"
+                        variant="destructive"
+                        onclick={handleClear}
+                    ></lightning-button>
+                </div>
+
+            </div>
+
+            <div class="slds-m-top_large">
+                <c-contact-list-child></c-contact-list-child>
+            </div>
+
+        </div>
+    </lightning-card>
+</template>

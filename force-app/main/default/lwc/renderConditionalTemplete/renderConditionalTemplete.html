@@ -1,0 +1,19 @@
+<template>
+    <!-- hide and show component on button click -->
+    <div class="slds-box " style="background-color: antiquewhite;">
+
+        <lightning-button variant="success" label={lable} title="Successful action" onclick={handleClick}
+            class="slds-m-left_x-small"></lightning-button>
+
+
+        <template if:true={isVisible}>
+            <lightning-card title="Component">
+                <lightning-button label="New" slot="action"></lightning-button>
+                <p class="slds-p-horizontal_small"> This is component body </p>
+                <p slot="footer">Card Footer</p>
+            </lightning-card>
+        </template>
+    </div>
+    
+
+</template>
